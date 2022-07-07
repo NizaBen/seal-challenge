@@ -17,7 +17,7 @@ module.exports = async function () {
       console.log("MongoDB database connection established successfully");
       // Init stream
       gfs = Grid(connection.db, mongoose.mongo);
-      gfs.collection("uploads");
+      gfs.collection("documents");
     });
   } catch (error) {
     console.log("Mongoose Error: ", error);

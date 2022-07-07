@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const shortId = require("shortId");
 const Schema = mongoose.Schema;
 
 const DocumentSchema = new Schema({
@@ -10,6 +11,10 @@ const DocumentSchema = new Schema({
   downloads: {
     type: Number,
     default: 0
+  },
+  shortLink: {
+    type: String,
+    default: shortId.generate
   }
 });
 

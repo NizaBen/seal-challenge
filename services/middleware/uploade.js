@@ -9,7 +9,8 @@ var storage = new GridFsStorage({
   file: (req, file) => {
     return {
       bucketName: dbConfig.docBucket,
-      filename: `${file.originalname}`
+      filename: `${file.originalname}`,
+      downloads: 0
     };
   }
 });
